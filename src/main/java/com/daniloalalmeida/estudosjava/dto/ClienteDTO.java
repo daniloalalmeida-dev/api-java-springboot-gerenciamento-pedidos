@@ -1,10 +1,12 @@
 package com.daniloalalmeida.estudosjava.dto;
 
 import com.daniloalalmeida.estudosjava.domain.Cliente;
+import com.daniloalalmeida.estudosjava.services.validation.ClienteUpdate;
 import org.hibernate.validator.constraints.Length;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
+@ClienteUpdate
 public class ClienteDTO {
 
     private Integer id;
