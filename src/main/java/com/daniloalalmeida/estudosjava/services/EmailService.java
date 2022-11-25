@@ -1,17 +1,15 @@
 package com.daniloalalmeida.estudosjava.services;
 
-import com.daniloalalmeida.estudosjava.domain.Pedido;
 import org.springframework.mail.SimpleMailMessage;
 
-import javax.mail.internet.MimeMessage;
+import com.daniloalalmeida.estudosjava.domain.Cliente;
+import com.daniloalalmeida.estudosjava.domain.Pedido;
 
 public interface EmailService {
 
-    void sendOrderConfirmationEmail(Pedido obj);
-    void sendEmail(SimpleMailMessage msg);
-
-    void sendOrderConfirmationHtmlEmail(Pedido obj);
-
-    void sendHtmlEmail(MimeMessage msg);
-
+	void sendOrderConfirmationEmail(Pedido obj);
+	
+	void sendEmail(SimpleMailMessage msg);
+	
+	void sendNewPasswordEmail(Cliente cliente, String newPass);
 }
